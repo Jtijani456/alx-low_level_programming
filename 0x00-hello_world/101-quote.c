@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Print a line with the standard error
+ * main - Print a line with the standard error using c
  * Return: Always 1 (Success)
  */
 int main(void)
