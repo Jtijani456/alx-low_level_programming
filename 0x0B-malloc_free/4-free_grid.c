@@ -1,21 +1,27 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * free_grid - frees the memory allocate for the grid
- * created by alloc_grid()
- * @grid: grid to free
- * @height: height of the grid
+ * free_grid - 2 dimensional grid previously created by alloc_grid function.
+ * @grid: 2 dim. array to free
+ * @height: input height (size)
+ * Return: Free grid
  */
+
 void free_grid(int **grid, int height)
 {
 	int frw;
-
+	/* if grid is not equal to null and height is also not equal to 0*/
 	if (grid != NULL || height != 0)
-		return;
+	{
 
-	for (frw = 0; frw < height; frw++)
-		free(grid[frw]);
+		for (frw = 0; frw < height; frw++)
+		{
 
-	free(grid);
+			free(grid[frw]);
+		}
+
+		free(grid);
+	}
 }
